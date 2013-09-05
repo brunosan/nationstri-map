@@ -5,7 +5,8 @@ data={
       "type": "Feature",
       "properties": {
         "section": "swim",
-        "distance": "1.5K"
+        "distance": "1.5K",
+        "popupContent": "Swim 1500m"
       },
       "geometry": {
         "type": "LineString",
@@ -41,7 +42,8 @@ data={
       "type": "Feature",
       "properties": {
         "section": "bike",
-        "distance": "40K"
+        "distance": "40K",
+        "popupContent": "Bike 40 Km"
       },
       "geometry": {
         "type": "LineString",
@@ -557,7 +559,8 @@ data={
       "type": "Feature",
       "properties": {
         "section": "run",
-        "distance": "10K"
+        "distance": "10K",
+        "popupContent": "Run 10 Km."
       },
       "geometry": {
         "type": "LineString",
@@ -792,7 +795,8 @@ data={
     {
       "type": "Feature",
       "properties": {
-        "section": "transition area"
+        "section": "transition area",
+        "popupContent": "Transition Area"
       },
       "geometry": {
         "type": "Polygon",

@@ -11,16 +11,57 @@
   <style>
     body { margin:0; padding:0; }
     #map { position:absolute; top:0; bottom:0; width:100%; }
+    .my-legend .legend-title {
+      text-align: left;
+      margin-bottom: 8px;
+      font-weight: bold;
+      font-size: 90%;
+      }
+    .my-legend .legend-scale ul {
+      margin: 0;
+      padding: 0;
+      float: left;
+      list-style: none;
+      }
+    .my-legend .legend-scale ul li {
+      display: block;
+      float: left;
+      width: 50px;
+      margin-bottom: 6px;
+      text-align: center;
+      font-size: 80%;
+      list-style: none;
+      }
+    .my-legend ul.legend-labels li span {
+      display: block;
+      float: left;
+      height: 15px;
+      width: 50px;
+      }
+    .my-legend .legend-source {
+      font-size: 70%;
+      color: #999;
+      clear: both;
+      }
+    .my-legend a {
+      color: #777;
+      }
+  </style>
   </style>
 </head>
 <body>
 <a href="https://github.com/brunosan/nationstri-map/tree/gh-pages"><img style="position: absolute; top: 0; right: 0; border: 0;z-index:1" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
 <div id='map'></div>
+
+<div id='legend-content'>
+  Source: <a href="http://nationstri.com/course-overview.html">The Nation's Triathlon | 2013 Course Overview</a>
+</div>
+
 <script src="/data.json" type="text/javascript"></script>
 <script type='text/javascript'>
 var map = L.mapbox.map('map', 'brunosan.map-cyglrrfu')
     .setView([38.8801,-76.9941], 13);
-
+map.legendControl.addLegend(document.getElementById('legend-content').innerHTML);
 function onEachFeature(data, layer) {
     // does this data have a property named popupContent?
     if (data.properties && data.properties.popupContent) {

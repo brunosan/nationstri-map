@@ -43,7 +43,7 @@ data={
       "properties": {
         "section": "bike",
         "distance": "40K",
-        "popupContent": "Bike 40 Km"
+        "popupContent": "Bike 40 Km (2 loops)"
       },
       "geometry": {
         "type": "LineString",
